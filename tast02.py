@@ -11,7 +11,11 @@ class Clothes:
     @property
     def expenditure(self):
         if self.my_type == 'coat':
-            return self.v / 6.5 + 0.5
+            return int(self.v / 6.5 + 0.5)
         else:
-            return self.v / 6.5 + 0.5
+            return int(self.h * 2 + 0.3)
 
+
+for i in range(5):
+    textile = Clothes(my_dict[random.randint(1, 2)], random.randint(56, 64), random.randint(150, 196))
+    print(f'{textile.my_type} {textile.expenditure}')
